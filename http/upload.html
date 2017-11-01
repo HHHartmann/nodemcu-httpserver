@@ -185,10 +185,6 @@
 				background-position: 0 -12px;
 			}
 
-			.downloadSpan{
-				right: 47px;
-			}
-			
 			.download:after{
 				color: #EEEEEE;
 				content: "\2B73"; 
@@ -204,6 +200,10 @@
 				content: "\2714";
 			}
 
+			.downloadSpan{
+				right: 52px;
+			}
+			
 			#upload ul li.error p{
 				color:red;
 			}
@@ -555,7 +555,7 @@
 
 						document.getElementById('fileInfo').innerHTML = '';
 
-						var tpl = '<li class="working"><p style="left: 30px;">%filenamelink%<i>%filesize%</i></p><span class="delete" id="fileStatus" onclick="RemoveFile(\'%filename%\');"></span><span class="downloadSpan" id="fileStatus"><a class="download" href="upload.lua?cmd=download&filename=%filename%"></a></span></li>';
+						var tpl = '<li class="working"><p style="left: 30px;">%filenamelink%<i>%filesize%</i></p><span class="delete" id="fileStatus" onclick="RemoveFile(\'%filename%\');"></span><span style="right: 52px;" class="downloadSpan" id="fileStatus"><a class="download" href="upload.lua?cmd=download&filename=%filename%"></a></span></li>';
 						var tplTotal = '<li class="working"><p style="left: 30px;">Used:<i>%used%</i></p></li><li class="working"><p style="left: 30px;">Free:<i>%free%</i></p></li><li class="working"><p style="left: 30px;">Total:<i>%total%</i></p></li>';
 
 						var append, link;
@@ -628,7 +628,6 @@
 				</ul>
 				<div class="fileInfo">Files on device:</div>
 				<ul id="fileInfo">
-<li class="working"><p style="left: 30px;">debug.lua<i>0.47 KB</i></p><span class="delete" id="fileStatus" onclick="RemoveFile('debug.lua');"></span><span class="downloadSpan" id="fileStatus"><a class="download" href="upload.lua?cmd=download&amp;filename=debug.lua"></a></span></li>
 				</ul>
 			</div>
 		</div>
