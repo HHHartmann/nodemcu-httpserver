@@ -163,11 +163,6 @@
 				position: absolute;
 			}
 
-			#test:after{
-				width: 15px;
-				height: 12px;
-				cursor:pointer;
-				content: "\2714\2718\2B73 "; 
 			}
 			
 			#upload ul li span{
@@ -608,13 +603,11 @@
 		</script>
 	</head>
 	<body>
-		<div id="test"></div>
 		<div id="dropbox" class="dropBox">
 			<div id="upload">
 				<div id="uploaddir" class="uploadDir">
 					<a onclick='UploadDir("");'>/</a>
 					<a onclick='UploadDir("http");'>/http</a>
-					<a onclick='UploadDir("error");'>/error</a>
 					<div id="selectedDir">selected Directory: <div id = "dir">bla</div></div></div>
 				<div id="drop">
 					Drop Here
