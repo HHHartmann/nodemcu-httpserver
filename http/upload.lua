@@ -76,9 +76,11 @@ return function (connection, req, args)
 					file.remove(mbTmpFilename)						
 
 					if (string.sub(mbFilename, -4) == '.lua') then
-						file.remove(string.sub(mbFilename, 0, -3) .. "lc")
-						node.compile(mbFilename)
-						file.remove(mbFilename)
+						if (file.exists(string.sub(mbFilename, 0, -3) .. "lc")) then
+                     file.remove(string.sub(mbFilename, 0, -3) .. "lc")
+                     node.compile(mbFilename)
+                     file.remove(mbFilename)
+                  end
 					end
 				end		
 			end

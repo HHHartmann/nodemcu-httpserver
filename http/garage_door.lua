@@ -39,8 +39,8 @@ local function sendResponse(connection, httpCode, errorCode, action, pinConfig, 
    if pinConfig == nil then
       pinConfig = {}
       pinConfig["door"] = 0
-      pinConfig["controlPin"] = 0
-      pinConfig["statusPin"] = 0
+      pinConfig["controlPin"] = 6
+      pinConfig["statusPin"] = 3
    end
    if message == nil then message = '' end
 
@@ -86,8 +86,8 @@ return function (connection, req, args)
    pinConfig = {}
    pinConfig["1"] = {}
    pinConfig["1"]["door"] = 1
-   pinConfig["1"]["controlPin"] = 2
-   pinConfig["1"]["statusPin"] = 5
+   pinConfig["1"]["controlPin"] = 6
+   pinConfig["1"]["statusPin"] = 3
    pinConfig["2"] = {}
    pinConfig["2"]["door"] = 2
    pinConfig["2"]["controlPin"] = 1
